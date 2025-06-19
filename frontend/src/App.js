@@ -6,131 +6,171 @@ import {
   HeroBanner, 
   ProjectRow, 
   SkillsSection, 
+  ExperienceSection,
   Footer 
 } from './Components';
 
-// Mock Portfolio Data
-const mockPortfolioData = {
+// Xavier Cabrera's Real Portfolio Data
+const xavierPortfolioData = {
   featuredProject: {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, inventory management, and real-time order tracking.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-    backgroundImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+    title: "Savy Bet Live",
+    description: "AI-powered sports prediction platform using player stats and real-time data. Built with machine learning algorithms to provide accurate betting insights and predictions for various sports.",
+    technologies: ["React", "Python", "TensorFlow", "Node.js", "AI/ML"],
+    backgroundImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
+    status: "Under Construction",
+    link: "https://jumping-clay-law-527.vscodeedu.app/"
   },
   
-  recentProjects: [
+  currentProjects: [
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team collaboration features.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Savy Bet Live",
+      description: "AI-powered sports prediction platform using player stats and real-time data for accurate betting insights.",
+      technologies: ["React", "Python", "TensorFlow", "AI/ML"],
+      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      status: "Under Construction",
+      link: "https://jumping-clay-law-527.vscodeedu.app/"
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather application with geolocation and 7-day forecasting capabilities.",
-      technologies: ["Vue.js", "OpenWeather API", "Chart.js"],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "AI Driven Connect 4",
+      description: "A Connect 4 game powered by AI logic for smart competitive play with advanced game strategies.",
+      technologies: ["Python", "AI Logic", "Game Development"],
+      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      link: "https://i.imgur.com/TXMq9ap.gif"
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with data visualization and scheduling.",
-      technologies: ["Next.js", "D3.js", "Prisma", "MySQL"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Grocery List Manager",
+      description: "Android app to create and manage grocery lists with login and database features using SQL.",
+      technologies: ["Android Studio", "Java", "SQL", "UX/UI"],
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      period: "Mar 2024 – May 2024",
+      github: "https://github.com/YoungSavy28/glm"
     },
     {
-      title: "Fitness Tracker",
-      description: "Mobile-responsive fitness tracking application with workout plans and progress monitoring.",
-      technologies: ["React Native", "Firebase", "Redux"],
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Recipe Finder",
-      description: "Recipe discovery app with ingredient-based search and meal planning features.",
-      technologies: ["Angular", "Spoonacular API", "SCSS"],
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "TipMaster",
+      description: "Tip calculator app focused on UX design, frontend/backend features, and collaborative testing.",
+      technologies: ["Android Studio", "Java", "Mobile Dev", "UX/UI"],
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      period: "Feb 2024 – Mar 2024"
     }
   ],
 
-  webApplications: [
+  mobileApplications: [
     {
-      title: "Real Estate Platform",
-      description: "Modern real estate listing platform with advanced search and virtual tours.",
-      technologies: ["React", "GraphQL", "Mapbox", "Stripe"],
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Grocery List Manager",
+      description: "Android app for creating and managing grocery lists with secure login and SQL database integration.",
+      technologies: ["Android Studio", "Java", "SQL", "Frontend"],
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      github: "https://github.com/YoungSavy28/glm"
     },
     {
-      title: "Learning Management System",
-      description: "Educational platform with course creation, progress tracking, and interactive quizzes.",
-      technologies: ["Vue.js", "Laravel", "MySQL", "AWS S3"],
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Reminders App",
+      description: "Task and reminders app with smooth UI, calendar features, and local storage capabilities.",
+      technologies: ["Android Studio", "Java", "Mobile App", "Database"],
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      github: "https://github.com/YoungSavy28/rlm"
     },
     {
-      title: "Event Management System",
-      description: "Comprehensive event planning and management platform with ticketing integration.",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
-      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "TipMaster Calculator",
+      description: "Advanced tip calculator with UX-focused design and collaborative testing framework.",
+      technologies: ["Android Studio", "Java", "UX/UI", "Testing"],
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      title: "Inventory Management",
-      description: "Enterprise inventory management system with barcode scanning and reporting.",
-      technologies: ["React", "Django", "PostgreSQL", "Docker"],
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "iOS Social App",
+      description: "Social networking app built with Swift following iOS development best practices and team collaboration.",
+      technologies: ["Swift", "Xcode", "iOS Dev", "Teamwork"],
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
   ],
 
-  mobileApps: [
+  securityAndGames: [
     {
-      title: "Food Delivery App",
-      description: "Cross-platform food delivery application with real-time tracking and payments.",
-      technologies: ["React Native", "Firebase", "Google Maps", "Stripe"],
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "AWS Security Audit Tool",
+      description: "Comprehensive security auditing tool that strengthened AWS infrastructure using OWASP ZAP and compliance monitoring.",
+      technologies: ["OWASP ZAP", "AWS", "Security Auditing", "Compliance"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      link: "https://docs.google.com/document/d/1Mg2hNpyi_YvMFjdOQlLFBcCc57uaaWusApRmjSokhtU/edit?usp=sharing"
     },
     {
-      title: "Chat Application",
-      description: "Real-time messaging app with end-to-end encryption and media sharing capabilities.",
-      technologies: ["React Native", "Socket.io", "Firebase", "WebRTC"],
-      image: "https://images.pexels.com/photos/15940012/pexels-photo-15940012.jpeg"
+      title: "Classic Pong Game",
+      description: "Recreation of the classic Pong game built in Python using Pygame with team collaboration and version control.",
+      technologies: ["Python", "Pygame", "PyCharm", "Teamwork"],
+      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      github: "https://github.com/YoungSavy28/Pong"
     },
     {
-      title: "Gaming Platform",
-      description: "Mobile gaming platform with multiplayer capabilities and leaderboards.",
-      technologies: ["Unity", "C#", "Firebase", "Photon"],
-      image: "https://images.pexels.com/photos/7915306/pexels-photo-7915306.jpeg"
-    },
-    {
-      title: "Expense Tracker",
-      description: "Personal finance management app with budgeting and expense categorization.",
-      technologies: ["React Native", "Redux", "SQLite", "Chart.js"],
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "AI Connect 4 Engine",
+      description: "Advanced Connect 4 game featuring intelligent AI opponent with strategic gameplay algorithms.",
+      technologies: ["Python", "AI Logic", "Game Development", "Algorithms"],
+      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      demo: "https://i.imgur.com/TXMq9ap.gif"
     }
   ],
 
-  advancedProjects: [
+  experience: [
     {
-      title: "AI Analytics Dashboard",
-      description: "Machine learning-powered analytics platform with predictive insights and data visualization.",
-      technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
-      image: "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg"
+      company: "Fiverr",
+      role: "Software Developer",
+      period: "Jul 2023 – Present",
+      type: "Freelancer",
+      achievements: [
+        "Delivered diverse software projects with high client retention and satisfaction using Java and Python",
+        "Enhanced web applications improving user experience and retention rates with HTML, CSS, and JavaScript",
+        "Developed custom solutions meeting evolving customer needs across multiple domains"
+      ]
     },
     {
-      title: "Blockchain Platform",
-      description: "Decentralized application with smart contracts and cryptocurrency integration.",
-      technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
-      image: "https://images.pexels.com/photos/9577233/pexels-photo-9577233.jpeg"
+      company: "Ubiq",
+      role: "Ubiq Insider Program - Software Development & UX/UI Collaboration",
+      period: "Jan 2025 – Apr 2025",
+      type: "Program Participant",
+      achievements: [
+        "Enhanced Ubiq's spatial media platform capabilities through intensive development program",
+        "Tested immersive 3D interfaces, improving user interaction and interface reliability",
+        "Implemented UX/UI improvements from agile workshops, increasing user satisfaction",
+        "Collaborated cross-functionally with designers and engineers to enhance application stability"
+      ]
     },
     {
-      title: "AI Assistant Platform",
-      description: "Intelligent virtual assistant with natural language processing and machine learning.",
-      technologies: ["Python", "OpenAI API", "NLP", "React", "TensorFlow"],
-      image: "https://images.pexels.com/photos/18069158/pexels-photo-18069158.png"
-    },
-    {
-      title: "IoT Monitoring System",
-      description: "Real-time IoT device monitoring and control system with edge computing capabilities.",
-      technologies: ["Node.js", "MQTT", "InfluxDB", "Grafana", "Docker"],
-      image: "https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71"
+      company: "La Nueva Quisqueya Car Service Inc.",
+      role: "Technology Consultant",
+      period: "Jun 2024 – Dec 2024",
+      location: "Queens, New York",
+      achievements: [
+        "Modernized dispatch operations by implementing software solutions reducing customer wait times",
+        "Digitized customer records and trip data using Excel and Python scripts for streamlined processes",
+        "Automated manual data entry processes, significantly increasing operational efficiency"
+      ]
     }
-  ]
+  ],
+
+  skills: {
+    languages: ["HTML", "Python", "CSS", "JavaScript", "Java", "C++", "Swift"],
+    frameworks: ["React.js", "Next.js", "Bootstrap", "TensorFlow/PyTorch", "Pandas", "NumPy", "Matplotlib"],
+    tools: ["Android Studio", "Xcode", "Git", "AWS", "SQL", "MongoDB", "Node.js"]
+  },
+
+  certifications: [
+    "CodePath Certification",
+    "Verizon Cloud Platform Job Simulation",
+    "JP Morgan Software Engineering Job Simulation"
+  ],
+
+  contact: {
+    email: "Xavier.Cabrera4528@gmail.com",
+    phone: "(347) 238-0833",
+    github: "https://github.com/YoungSavy28",
+    linkedin: "https://www.linkedin.com/in/xaviercabrera28/"
+  },
+
+  bio: {
+    name: "Xavier Cabrera",
+    title: "Computer Science Student & Full-Stack Developer",
+    school: "Queens College",
+    graduation: "June 2025",
+    description: "Computer Science student at Queens College passionate about turning ideas into powerful full-stack and AI-powered web applications. From sports prediction platforms to real-time games, I build with React, Node.js, MongoDB, and Python — blending clean design with smart functionality and practical innovation.",
+    personalNote: "As a first-generation college student, I'm driven by more than just code — I aim to uplift my family and community through meaningful, purpose-driven technology."
+  }
 };
 
 function App() {
@@ -149,37 +189,34 @@ function App() {
       <NetflixHeader />
       
       {/* Hero Section */}
-      <HeroBanner project={mockPortfolioData.featuredProject} />
+      <HeroBanner project={xavierPortfolioData.featuredProject} />
       
       {/* Project Sections */}
       <div className="relative z-10 bg-black">
         <ProjectRow 
-          title="Recent Projects" 
-          projects={mockPortfolioData.recentProjects} 
+          title="Current Projects" 
+          projects={xavierPortfolioData.currentProjects} 
           isLarge={true}
-        />
-        
-        <ProjectRow 
-          title="Web Applications" 
-          projects={mockPortfolioData.webApplications} 
         />
         
         <ProjectRow 
           title="Mobile Applications" 
-          projects={mockPortfolioData.mobileApps} 
+          projects={xavierPortfolioData.mobileApplications} 
         />
         
         <ProjectRow 
-          title="Advanced Projects" 
-          projects={mockPortfolioData.advancedProjects} 
-          isLarge={true}
+          title="Security & Games" 
+          projects={xavierPortfolioData.securityAndGames} 
         />
         
+        {/* Experience Section */}
+        <ExperienceSection experience={xavierPortfolioData.experience} />
+        
         {/* Skills Section */}
-        <SkillsSection />
+        <SkillsSection skills={xavierPortfolioData.skills} certifications={xavierPortfolioData.certifications} />
         
         {/* Footer */}
-        <Footer />
+        <Footer contact={xavierPortfolioData.contact} />
       </div>
     </div>
   );
