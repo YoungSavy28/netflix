@@ -86,22 +86,49 @@ const mockPortfolioData = {
       image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      title: "Meditation App",
-      description: "Mindfulness and meditation app with guided sessions and progress tracking.",
-      technologies: ["Flutter", "Dart", "Firebase", "Audio SDK"],
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Chat Application",
+      description: "Real-time messaging app with end-to-end encryption and media sharing capabilities.",
+      technologies: ["React Native", "Socket.io", "Firebase", "WebRTC"],
+      image: "https://images.pexels.com/photos/15940012/pexels-photo-15940012.jpeg"
+    },
+    {
+      title: "Gaming Platform",
+      description: "Mobile gaming platform with multiplayer capabilities and leaderboards.",
+      technologies: ["Unity", "C#", "Firebase", "Photon"],
+      image: "https://images.pexels.com/photos/7915306/pexels-photo-7915306.jpeg"
     },
     {
       title: "Expense Tracker",
       description: "Personal finance management app with budgeting and expense categorization.",
       technologies: ["React Native", "Redux", "SQLite", "Chart.js"],
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    }
+  ],
+
+  advancedProjects: [
+    {
+      title: "AI Analytics Dashboard",
+      description: "Machine learning-powered analytics platform with predictive insights and data visualization.",
+      technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
+      image: "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg"
     },
     {
-      title: "Travel Companion",
-      description: "Travel planning and booking app with itinerary management and local recommendations.",
-      technologies: ["Flutter", "Google Maps API", "Firebase", "Travel APIs"],
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Blockchain Platform",
+      description: "Decentralized application with smart contracts and cryptocurrency integration.",
+      technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
+      image: "https://images.pexels.com/photos/9577233/pexels-photo-9577233.jpeg"
+    },
+    {
+      title: "AI Assistant Platform",
+      description: "Intelligent virtual assistant with natural language processing and machine learning.",
+      technologies: ["Python", "OpenAI API", "NLP", "React", "TensorFlow"],
+      image: "https://images.pexels.com/photos/18069158/pexels-photo-18069158.png"
+    },
+    {
+      title: "IoT Monitoring System",
+      description: "Real-time IoT device monitoring and control system with edge computing capabilities.",
+      technologies: ["Node.js", "MQTT", "InfluxDB", "Grafana", "Docker"],
+      image: "https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71"
     }
   ]
 };
