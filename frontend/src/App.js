@@ -169,6 +169,12 @@ function App() {
           projects={mockPortfolioData.mobileApps} 
         />
         
+        <ProjectRow 
+          title="Advanced Projects" 
+          projects={mockPortfolioData.advancedProjects} 
+          isLarge={true}
+        />
+        
         {/* Skills Section */}
         <SkillsSection />
         
